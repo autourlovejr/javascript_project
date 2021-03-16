@@ -1,0 +1,220 @@
+/* Page Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Top */
+option:nth-child(even) {
+
+    color: blue;
+}
+
+
+
+.numbers {
+    background-color: gold;
+    font-size: 10px;
+    font-family: impact;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+    border-radius: 25px;
+    padding: 2%;
+}
+
+main {
+    
+    font-family: impact;
+    font-size: 20px;
+    background: gold;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 25px;
+    justify-content: center;
+    padding: 1px;
+    
+}
+
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.main-header {
+
+    margin-top: 5px;
+}
+
+
+
+.main-footer {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2em 0;
+    background: #ffd700;
+    border-radius: 25px;
+    background: url(grownrose.JPG) no-repeat bottom / cover;
+    color: white;
+}
+
+
+.simple {
+    font-size: 50px;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 25px;
+
+    margin: left auto;
+    border-radius: 50px;
+
+    background: gold url(grownrose.JPG) no-repeat center / cover;
+    
+    
+}
+
+.form {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    color: black;
+    border-radius: 10px; 
+    padding: 1em;
+    background: gold;
+    margin: 10px;
+}
+
+.button {
+
+    background-color: gold;
+    border: 0;
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 70% auto;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+    
+
+}
+
+
+
+
+/* Media Query */
+
+@media (min-width: 769px) {
+
+    .numbers {
+        background-color: gold;
+        font-size: 26px;
+        font-family: impact;
+        justify-content: space-between;
+        margin-top: 4px;
+    }
+    
+    .form {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-grow: 4;
+        font-size: 2em;
+        margin-top: 25px;
+        padding: .5em;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .wrap {
+       min-height: calc(100vh - 100px); 
+    }
+
+    .simple {
+        font-size: 56px;
+        padding: 10%;
+        margin: auto;
+        text-align: center;
+    }
+
+    
+
+    .button {
+        margin: 0 auto;
+        max-width: 100%;
+        display: flex;
+        margin-bottom: 5px;
+    }
+
+    .button:hover {
+
+        background: red;
+    }
+
+    .comments {
+
+        margin-top: 35px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2em;
+        max-width: inherit;
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .button {
+
+        display: flex;
+        margin: 20px auto;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+   
+    .comments {
+
+        margin-top: 35px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2em;
+        max-width: 75%;
+        display: flex;
+        margin-bottom: 2px;
+    }
+
+    .simple {
+        font-size: 40px;
+        padding: 25px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .dropdown {
+        
+        max-width: 100%;
+    }
+
+    
+    .form {
+
+        text-align: center;
+    }
+
+    .numbers {
+        background-color: gold;
+        font-size: 26px;
+        font-family: impact;
+        justify-content: space-between;
+        margin-top: 4px;
+    }
+}
