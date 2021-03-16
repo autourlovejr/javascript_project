@@ -1,2 +1,1 @@
-# ecommerce
-online website
+Simple Services 2.0
