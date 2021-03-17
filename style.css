@@ -13,7 +13,7 @@ option:nth-child(even) {
 
 
 .numbers {
-    background-color: gold;
+    background-color: royalblue;
     font-size: 10px;
     font-family: impact;
     display: flex;
@@ -28,7 +28,7 @@ main {
     
     font-family: impact;
     font-size: 20px;
-    background: gold;
+    background: royalblue;
     width: 70%;
     margin: 0 auto;
     text-align: center;
@@ -56,7 +56,7 @@ main {
     margin: 0 auto;
     text-align: center;
     padding: 2em 0;
-    background: #ffd700;
+    background: royalblue;
     border-radius: 25px;
     background: url(grownrose.JPG) no-repeat bottom / cover;
     color: white;
@@ -72,7 +72,7 @@ main {
     margin: left auto;
     border-radius: 50px;
 
-    background: gold url(grownrose.JPG) no-repeat center / cover;
+    background: royalblue url(grownrose.JPG) no-repeat center / cover;
     
     
 }
@@ -83,13 +83,13 @@ main {
     color: black;
     border-radius: 10px; 
     padding: 1em;
-    background: gold;
+    background: royalblue;
     margin: 10px;
 }
 
 .button {
 
-    background-color: gold;
+    background-color: royalblue;
     border: 0;
     border-radius: 5px;
     padding: 25px;
@@ -110,7 +110,7 @@ main {
 @media (min-width: 769px) {
 
     .numbers {
-        background-color: gold;
+        background-color: royalblue;
         font-size: 26px;
         font-family: impact;
         justify-content: space-between;
@@ -211,7 +211,7 @@ main {
     }
 
     .numbers {
-        background-color: gold;
+        background-color: royalblue;
         font-size: 26px;
         font-family: impact;
         justify-content: space-between;
