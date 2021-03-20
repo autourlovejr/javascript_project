@@ -9,14 +9,6 @@
 </head>
 <body class='body'>
 
-    <div>
-        <!-- <main></main> -->
-        
-    </div>
-
-    
-        <!-- <h2 class='numbers'></h2> -->
-        <script src="javascript.js"></script>
     
 
     <div class='wrap'>
@@ -29,35 +21,44 @@
 
 
             <div class='container'>
-                <form class="form" action="post" method="index.html">
-                    <label for="Service">Service</label><br>
-                    <select class='dropdown' id="Service">
-                        <option value="">--Please Choose An Option--</option>
-                        <option value="Yard Work">Yard Work</option>
-                        <option value="Manual Labor">Manual Labor</option>
-                        <option value="Car Services">Car Services</option>
-                        <option value="Errands">Errands</option>
-                </select><br>
-                    <label for="Date">Date</label><br>
-                    <input class='dropdown' type="date" id="Date"    name="user_date"><br>
-                    <legend>From</legend>
-                    <input class='dropdown' type="time"  id="Time"   name="user_time">
-                    <legend>Till</legend>
-                    <input class='dropdown' type="time"  id="Time"   name="user_time">
-                    
-                    
 
+                <form action="#" method="post">
+                    <p>
+                      <label for="name">Name</label>
+                      <input id="name" name="name" type="text">
+                      <span>Can only contain letters a-z in lowercase</span>
+                    </p>
+                    <p>
+                      <label for="telephone">Telephone</label>
+                      <input id="telephone" name="telephone" type="text">
+                      <span>The telephone number must be in the format of (555) 555-5555</span>
+                    </p>
+                    <p>
+                      <label for="email">Email</label>
+                      <input id="email" name="email" type="text">
+                      <span>Must be a valid email address</span>
+                    </p>
+                    <p>
+                      <label for='service'>Service</label><br>
+                      <select>
+                        <option value=''>--Please Select An Option--</option>
+                        <option value='errands'>Errands</option>
+                        <option value='car detail'>Car Detail</option>
+                        <option value='grounds keeping'>Grounds Keeping</option>
+                      </select>
+                    </p>
+                    <button class="button" type="button">Submit</button>
                 </form>
-
-                <textarea class='comments'>Comments or Details...</textarea>
+                  <script src="javascript.js" type="text/javascript" charset="utf-8"></script>
+                
                 <br>
 
-                <button class="button" type="button">Submit</button>
+                
             </div>
         </header>
     </div>
     <footer class='main-footer'>
-        <span>&copy;2020 Simple Services.</span>
+      <span>&copy;2020 Simple Services.</span>
     </footer>
 </body>
 </html>

@@ -4,217 +4,134 @@
     box-sizing: border-box;
 }
 
-/* Top */
+/* Top
 option:nth-child(even) {
 
     color: blue;
+} */
+
+
+
+body {
+    background: #4aa7f8;
+    font-family: sans-serif;
+    font-size: 10px
 }
-
-
-
-.numbers {
-    background-color: royalblue;
-    font-size: 10px;
-    font-family: impact;
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    margin: auto;
-    border-radius: 25px;
-    padding: 2%;
+form, .output {
+    background-image: url(clouds.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 4em 4em 2em;
+    max-width: 400px;
+    opacity: 20px;
+    margin: 50px auto;
+    box-shadow: 0 0 1em #222;
+    border-radius: 5px;
 }
-
-main {
-    
-    font-family: impact;
-    font-size: 20px;
-    background: royalblue;
-    width: 70%;
-    margin: 0 auto;
+p {
+    margin: 0 0 3em 0;
+    position: relative;
+    padding: 1em;
+}
+p.error {
+    border: 1px solid #ffa3a3;
+    border-radius: 1em;
+    padding: 1em;
+    background: #ffe5e9;
+}
+.error input {
+    color: red;
+}
+label {
+    display: block;
+    font-size: 1.6em;
+    margin: 0 0 .5em;
+    color: #333;
+}
+input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none
+}
+input[type="text"],
+input[type="password"] {
+    background: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    font-size: 1.6em;
+    padding: .8em .5em;
+    border-radius: 5px;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background: #fff
+}
+span {
+    border-radius: 5px;
+    display: none;
+    font-size: 1.3em;
     text-align: center;
-    border-radius: 25px;
-    justify-content: center;
-    padding: 1px;
+    position: absolute;
+    background: #2F558E;
+    left: 105%;
+    top: 25px;
+    width: 160px;
+    padding: 7px 10px;
+    color: #fff;
+}
+span:after {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-right-color: #2F558E;
+    border-width: 8px;
+    margin-top: -8px;
+}
+input[type="submit"] {
+    background: #2F558E;
+    box-shadow: 0 3px 0 0 #1D3C6A;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 2em;
+    line-height: 1.6em;
+    margin: 2em 0 0;
+    outline: none;
+    padding: .8em 0;
+    text-shadow: 0 1px #68B25B;
+  
+}
+
+button {
+    margin-left: 38%;
+    cursor: pointer;
     
 }
 
-
-.container {
-    width: 70%;
-    margin: 0 auto;
+.simple {
+    color: whitesmoke;
+    font-size: 5.5em;
+    background: darkorange;
+    max-width: fit-content;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 5em white;
 }
-
-.main-header {
-
-    margin-top: 5px;
-}
-
-
 
 .main-footer {
     width: 70%;
     margin: 0 auto;
     text-align: center;
     padding: 2em 0;
-    background: royalblue;
     border-radius: 25px;
-    background: url(grownrose.JPG) no-repeat bottom / cover;
     color: white;
-}
-
-
-.simple {
-    font-size: 50px;
-    color: black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 25px;
-
-    margin: left auto;
-    border-radius: 50px;
-
-    background: royalblue url(grownrose.JPG) no-repeat center / cover;
-    
-    
-}
-
-.form {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2em;
-    color: black;
-    border-radius: 10px; 
-    padding: 1em;
-    background: royalblue;
-    margin: 10px;
-}
-
-.button {
-
-    background-color: royalblue;
-    border: 0;
-    border-radius: 5px;
-    padding: 25px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    max-width: 70% auto;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: medium;
-    
-
-}
-
-
-
-
-/* Media Query */
-
-@media (min-width: 769px) {
-
-    .numbers {
-        background-color: royalblue;
-        font-size: 26px;
-        font-family: impact;
-        justify-content: space-between;
-        margin-top: 4px;
-    }
-    
-    .form {
-        max-width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-grow: 4;
-        font-size: 2em;
-        margin-top: 25px;
-        padding: .5em;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        text-align: center;
-    }
-
-    .wrap {
-       min-height: calc(100vh - 100px); 
-    }
-
-    .simple {
-        font-size: 56px;
-        padding: 10%;
-        margin: auto;
-        text-align: center;
-    }
-
-    
-
-    .button {
-        margin: 0 auto;
-        max-width: 100%;
-        display: flex;
-        margin-bottom: 5px;
-    }
-
-    .button:hover {
-
-        background: red;
-    }
-
-    .comments {
-
-        margin-top: 35px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 2em;
-        max-width: inherit;
-        display: flex;
-        margin-bottom: 10px;
-    }
-
-}
-
-
-
-
-@media (max-width: 768px) {
-
-    .button {
-
-        display: flex;
-        margin: 20px auto;
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-   
-    .comments {
-
-        margin-top: 35px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 2em;
-        max-width: 75%;
-        display: flex;
-        margin-bottom: 2px;
-    }
-
-    .simple {
-        font-size: 40px;
-        padding: 25px;
-        margin: auto;
-        text-align: center;
-    }
-
-    .dropdown {
-        
-        max-width: 100%;
-    }
-
-    
-    .form {
-
-        text-align: center;
-    }
-
-    .numbers {
-        background-color: royalblue;
-        font-size: 26px;
-        font-family: impact;
-        justify-content: space-between;
-        margin-top: 4px;
-    }
 }
