@@ -7,47 +7,52 @@
     <link href="style.css" rel= "stylesheet">
     
 </head>
-<body class='body'>
+<body>
 
     
 
     <div class='wrap'>
         <header class= "main-header">
-            <div class='container'>
-                <h1 class= "simple">Simple Services</h1>
-            </div> 
+            <div>
+              <h1 class= "simple">Simple Services</h1>
+            </div>
+
+            
+            <div  class="background"></div>
             
             
 
-
-            <div class='container'>
+            
+            <div>
 
                 <form action="#" method="post">
                     <p>
                       <label for="name">Name</label>
                       <input id="name" name="name" type="text">
-                      <span>Can only contain letters a-z in lowercase</span>
+                      <span class='hiddenMessage'>Can only contain letters a-z in lowercase</span>
                     </p>
                     <p>
                       <label for="telephone">Telephone</label>
                       <input id="telephone" name="telephone" type="text">
-                      <span>The telephone number must be in the format of (555) 555-5555</span>
+                      <span class='hiddenMessage'>The telephone number must be in the format of (555) 555-5555</span>
                     </p>
                     <p>
                       <label for="email">Email</label>
                       <input id="email" name="email" type="text">
-                      <span>Must be a valid email address</span>
+                      <span class='hiddenMessage'>Must be a valid email address</span>
                     </p>
                     <p>
-                      <label for='service'>Service</label><br>
-                      <select>
+                      <label  for='service'>Service</label><br>
+                      <select class='jobs'>
                         <option value=''>--Please Select An Option--</option>
                         <option value='errands'>Errands</option>
-                        <option value='car detail'>Car Detail</option>
+                        <option value='car detail'>Car Detailing</option>
                         <option value='grounds keeping'>Grounds Keeping</option>
                       </select>
                     </p>
                     <button class="button" type="button">Submit</button>
+
+                    <div></div>
                 </form>
                   <script src="javascript.js" type="text/javascript" charset="utf-8"></script>
                 
@@ -58,7 +63,7 @@
         </header>
     </div>
     <footer class='main-footer'>
-      <span>&copy;2020 Simple Services.</span>
+      <span>&copy;2021 Simple Services.</span>
     </footer>
 </body>
 </html>

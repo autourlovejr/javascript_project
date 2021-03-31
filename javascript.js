@@ -14,6 +14,23 @@
 // document.querySelector('main').innerHTML = `<p>${message}</p>`;
 
 
+const background = document.querySelector('.background');
+
+
+
+// fetch('https://api.pexels.com/v1/photo/black-toyota-4-door-truck-1149137/')
+//     .then(response => response.json())
+//     .then(data => generateImage(data.message))
+
+// function generateImage(data) {
+//     const html = `
+//         <img src='${data}'alt>
+//     `;
+//     background.innerHTML = html;
+// }
+
+
+//***REGEX***
 const nameInput = document.getElementById("name");
 const telephoneInput = document.getElementById("telephone");
 const emailInput = document.getElementById("email");
@@ -45,7 +62,7 @@ function showOrHideTip(show, element) {
         element.style.display = 'inherent';
     } else {
         element.style.display = 'none';
-    }
+    };
 }
 
 function createListener(validator) {
