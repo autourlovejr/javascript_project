@@ -1,0 +1,26 @@
+{
+  "name": "javascript-project",
+  "version": "1.0.0",
+  "description": "Simple Services 2.0",
+  "main": "javascript.js",
+  "dependencies": {
+    "chai": "^4.3.4"
+  },
+  "devDependencies": {
+    "mocha": "^8.3.2"
+  },
+  "scripts": {
+    "test": "mocha",
+    "test:watch": "mocha --watch ./test ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autourlovejr/javascript_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/autourlovejr/javascript_project/issues"
+  },
+  "homepage": "https://github.com/autourlovejr/javascript_project#readme"
+}

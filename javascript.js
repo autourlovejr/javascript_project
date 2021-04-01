@@ -14,7 +14,7 @@
 // document.querySelector('main').innerHTML = `<p>${message}</p>`;
 
 
-const background = document.querySelector('.background');
+
 
 
 
@@ -30,15 +30,13 @@ const background = document.querySelector('.background');
 // }
 
 
+
 //***REGEX***
-const nameInput = document.getElementById("name");
 const telephoneInput = document.getElementById("telephone");
 const emailInput = document.getElementById("email");
+const form = document.querySelector('form');
+const service = document.getElementById('service');
 
-// Can only contain letters a-z
-function isValidName(name) {
-    return /^[a-z]+$/.test(name);
-}
 
 // The telephone number must be in the format of (555) 555-5555
 function isValidTelephone(telephone) {
@@ -50,6 +48,8 @@ function isValidEmail(email) {
     return /^[^@]+@[^@.]*\.[a-z]*$/i.test(email);
 }
 
+
+//Format Telephone//
 function formatTelephone(text) {
     const regex = /^\D*(\d{3})\D*(\d{3})\D*(\d{4})\D*$/;
     return text.replace(regex, '($1) $2-$3');
@@ -73,13 +73,49 @@ function createListener(validator) {
       const tooltip = e.target.nextElementSibling;
       showOrHideTip(showTip, tooltip);
     };
-}
+  }
+
+
   
-nameInput.addEventListener("input", createListener(isValidName));
+
+  telephoneInput.addEventListener("input", createListener(isValidTelephone));
   
-telephoneInput.addEventListener("input", createListener(isValidTelephone));
+
+  
+
 telephoneInput.addEventListener("blur", e => {
     e.target.value = formatTelephone(e.target.value);
 });
-  
-emailInput.addEventListener("input", createListener(isValidEmail));
+
+//------------------------------------------------------
+//Post Data//
+//------------------------------------------------------
+
+form.addEventListener('submit', postData);
+
+function checkStatus(response) {
+    if (response.ok) {
+      return Promise.resolve(response);
+    } else {
+      return Promise.reject(new Error(response.statusText));
+    }
+  }
+
+
+function postData (e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const telephone = document.getElementById('telephone').value;
+    const email = document.getElementById('email').value;
+
+    fetch('https://jsonplaceholder.typicode.com/comments', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({name, telephone, email, service })
+    })
+        .then(checkStatus)
+        .then(res => res.json())
+        .then(data => console.log(data))
+}
