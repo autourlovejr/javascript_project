@@ -1,17 +1,14 @@
-// let Henry = ['yes'];
-// let name = prompt('Hello, What is your name?')
-// let search = prompt('Do you make over $100,000 a year?')
+let Henry = ['yes'];
+let search = prompt('Do you make over $100,000 a year?')
 
-// if (Henry.includes(search.toLowerCase())) {
-//     message = `Hello, ${name.toUpperCase()}, How may we serve you? `;
-// } else {
-//     message =  `This service may not be for you, ${name.toUpperCase()}, sorry!`;
-// }
-
+if (Henry.includes(search.toLowerCase())) {
+    message = 'Hello, How may we serve you?';
+} else {
+    message =  'This service may not be for you, sorry!';
+}
 
 
-
-// document.querySelector('main').innerHTML = `<p>${message}</p>`;
+document.querySelector('main').innerHTML = `<p>${message}</p>`;
 
 
 
@@ -31,14 +28,21 @@
 
 
 
-//***REGEX***
+
 const telephoneInput = document.getElementById("telephone");
 const emailInput = document.getElementById("email");
 const form = document.querySelector('form');
 const service = document.getElementById('service');
+const input = form.querySelector('input');
 
 
-// The telephone number must be in the format of (555) 555-5555
+//-------------------------------------------
+//***REGEX***
+//----------------------------------------
+
+
+
+//TELEPHONE NUMBER//
 function isValidTelephone(telephone) {
     return /^\(\s\d{3}\)\d{3}-\d{4}$/.test(telephone);
 }
@@ -73,16 +77,13 @@ function createListener(validator) {
       const tooltip = e.target.nextElementSibling;
       showOrHideTip(showTip, tooltip);
     };
-  }
+}
 
 
   
 
-  telephoneInput.addEventListener("input", createListener(isValidTelephone));
+telephoneInput.addEventListener("input", createListener(isValidTelephone));
   
-
-  
-
 telephoneInput.addEventListener("blur", e => {
     e.target.value = formatTelephone(e.target.value);
 });
@@ -92,6 +93,15 @@ telephoneInput.addEventListener("blur", e => {
 //------------------------------------------------------
 
 form.addEventListener('submit', postData);
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('name').value = '';
+    document.getElementById('telephone').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('service').value = '';
+});
+
 
 function checkStatus(response) {
     if (response.ok) {
@@ -113,7 +123,7 @@ function postData (e) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({name, telephone, email, service })
+        body: JSON.stringify({name, telephone, email })
     })
         .then(checkStatus)
         .then(res => res.json())

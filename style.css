@@ -64,8 +64,8 @@ input[name="telephone"] {
 }
 
 .hiddenMessage {
-    border-radius: 5px;
     display: none;
+    border-radius: 5px;
     font-size: 1.3em;
     text-align: center;
     position: absolute;
