@@ -1,8 +1,18 @@
+const telephoneInput = document.getElementById("telephone");
+const emailInput = document.getElementById("email");
+const form = document.querySelector('form');
+const service = document.getElementById('service');
+const input = form.querySelector('input');
+// const background = document.getElementById('background');
+
+
+
+
 let Henry = ['yes'];
-let search = prompt('Do you make over $100,000 a year?')
+let search = prompt('Hello, do you make over $100,000 a year?')
 
 if (Henry.includes(search.toLowerCase())) {
-    message = 'Hello, How may we serve you?';
+    message = 'Great, How may we serve you?';
 } else {
     message =  'This service may not be for you, sorry!';
 }
@@ -15,7 +25,7 @@ document.querySelector('main').innerHTML = `<p>${message}</p>`;
 
 
 
-// fetch('https://api.pexels.com/v1/photo/black-toyota-4-door-truck-1149137/')
+// fetch('https://dog.ceo/api/breeds/image/random')
 //     .then(response => response.json())
 //     .then(data => generateImage(data.message))
 
@@ -29,11 +39,7 @@ document.querySelector('main').innerHTML = `<p>${message}</p>`;
 
 
 
-const telephoneInput = document.getElementById("telephone");
-const emailInput = document.getElementById("email");
-const form = document.querySelector('form');
-const service = document.getElementById('service');
-const input = form.querySelector('input');
+
 
 
 //-------------------------------------------
@@ -61,28 +67,9 @@ function formatTelephone(text) {
 
 
 
-function showOrHideTip(show, element) {
-    if (show) {
-        element.style.display = 'inherent';
-    } else {
-        element.style.display = 'none';
-    };
-}
-
-function createListener(validator) {
-    return e => {
-      const text = e.target.value;
-      const valid = validator(text);
-      const showTip = text !== "" && !valid;
-      const tooltip = e.target.nextElementSibling;
-      showOrHideTip(showTip, tooltip);
-    };
-}
-
-
   
 
-telephoneInput.addEventListener("input", createListener(isValidTelephone));
+// telephoneInput.addEventListener("input", createListener(isValidTelephone));
   
 telephoneInput.addEventListener("blur", e => {
     e.target.value = formatTelephone(e.target.value);
