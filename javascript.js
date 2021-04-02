@@ -3,7 +3,6 @@ const emailInput = document.getElementById("email");
 const form = document.querySelector('form');
 const service = document.getElementById('service');
 const input = form.querySelector('input');
-// const background = document.getElementById('background');
 
 
 
